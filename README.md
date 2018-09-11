@@ -1,6 +1,6 @@
 get-latlng
 ==========
-A script to retrieve the latitude and longitude for a set of Canadian postal codes. Inserts the mapping into the database.
+A script to retrieve the latitude and longitude for a set of Canadian postal codes using batch geocoding from the MapQuest API. Inserts the mapping into the database. Script could easily be modified to support any batch geocoding, if desired (simply change the URL request).
 
 Supports connecting a MySQL or MSSQL database (specified in the settings.json file, see below).
 
