@@ -1,0 +1,17 @@
+{
+  "apikey": "",
+  "database": {
+    "type": "mssql",
+    "connectionDetails": {
+      "server": "localhost",
+      "user": "",
+      "password": "",
+      "database": "postcodes",
+      "options": {
+        "encrypt": false
+      }
+    },
+    "selectAllPostcodesSql": "SELECT TOP 5000 postcode FROM postalcodes WHERE latitude IS NULL OR longitude IS NULL",
+    "setPostcodeSql": "UPDATE postalcodes SET latitude = @latitude AND longitude = @longitude WHERE postcode = @postcode"
+  } 
+}

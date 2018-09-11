@@ -1,0 +1,17 @@
+{
+  "name": "get-latlng",
+  "version": "1.0.0",
+  "description": "Get latitude/longitude from postalcode",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matt Triff",
+  "license": "MIT",
+  "dependencies": {
+    "mssql": "^4.1.0",
+    "mysql": "^2.16.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
+  }
+}

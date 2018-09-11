@@ -1,0 +1,14 @@
+{
+  "apikey": "",
+  "database": {
+    "type": "mysql",
+    "connectionDetails": {
+      "host": "localhost",
+      "user": "",
+      "password": "",
+      "database": "postcodes"
+    },
+    "selectAllPostcodesSql": "SELECT postcode FROM postalcodes WHERE latitude IS NULL OR longitude IS NULL LIMIT 5000",
+    "setPostcodeSql": "UPDATE postalcodes SET latitude = ? AND longitude = ? WHERE postcode = ?"
+  } 
+}
