@@ -12,6 +12,6 @@
       }
     },
     "selectAllPostcodesSql": "SELECT TOP 5000 postcode FROM postalcodes WHERE latitude IS NULL OR longitude IS NULL",
-    "setPostcodeSql": "UPDATE postalcodes SET latitude = @latitude AND longitude = @longitude WHERE postcode = @postcode"
+    "setPostcodeSql": "UPDATE postalcodes SET latitude = @latitude, longitude = @longitude WHERE postcode = @postcode"
   } 
 }
