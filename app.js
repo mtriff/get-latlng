@@ -133,6 +133,7 @@ function getLocation(batch, insertLookup) {
     .then(function(body) {
       if (!body.results) return;
       if (!body.results.length) return;
+      var insertLookupPromises = [];
       for (var i = 0; i < body.results.length; i++) {
         var postcode;
         var latitude;
@@ -146,8 +147,9 @@ function getLocation(batch, insertLookup) {
           if (body.results[i].locations[0].latLng.lat) latitude = body.results[i].locations[0].latLng.lat;
           if (body.results[i].locations[0].latLng.lng) longitude = body.results[i].locations[0].latLng.lng;
         }
-        return insertLookup(postcode, latitude, longitude);
+        insertLookupPromises.push(insertLookup(postcode, latitude, longitude));
       }
+      return Promise.all(insertLookupPromises);
     })
     .catch(function(error) {
       console.log("Error with request: " + options.uri);
